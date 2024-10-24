@@ -1,0 +1,12 @@
+﻿<h3>ServerSideCounter</h3>
+@currentCount
+<button @onclick="IncrementCount">Click me</button>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}

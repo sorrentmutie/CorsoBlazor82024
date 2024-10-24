@@ -1,21 +1,32 @@
 ﻿@page "/"
 
+@inject IStudentsData studentsData
+@attribute [StreamRendering]
+
 <PageTitle>Home</PageTitle>
 
 <h1>Hello, world!</h1>
-<button @onclick="IncrementCount">Click me</button>
 
-
-
+@if(students != null)
+{ 
+    <ul>
+        @foreach (var student in students)
+        {
+            <li>@student.Name @student.Id @student.Email</li>
+        }
+    </ul>
+}
 
 Welcome to your new app.
-@currentCount
+
+<ServerSideCounter @rendermode="new InteractiveServerRenderMode()" />
 
 @code {
-    private int currentCount = 0;
+    private List<Student>? students;
 
-    private void IncrementCount()
+    protected override async Task OnInitializedAsync()
     {
-        currentCount++;
+       //students =  await studentsData.GetStudents();
     }
+
 }
