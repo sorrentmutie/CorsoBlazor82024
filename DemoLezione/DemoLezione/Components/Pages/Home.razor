@@ -1,0 +1,21 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+<button @onclick="IncrementCount">Click me</button>
+
+
+
+
+Welcome to your new app.
+@currentCount
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}
