@@ -1,0 +1,27 @@
+﻿@using Microsoft.JSInterop
+@inject IJSRuntime JSRuntime
+
+<div class="my-component">
+    This component is defined in the <strong>DemoLezione.UILibrary</strong> library.
+</div>
+
+<button @onclick="DoSomething">Click me</button>
+
+@code {
+    ExampleJsInterop? exampleJsInterop;
+
+    protected override async Task OnInitializedAsync()
+    {
+        exampleJsInterop = new ExampleJsInterop(JSRuntime);
+        // await JSRuntime.InvokeVoidAsync("helloJavaScript");
+    }
+
+    private async Task DoSomething()
+    {
+        if(exampleJsInterop is not null)
+        {
+            await exampleJsInterop.Prompt("Hello from Blazor");
+        }
+    }
+
+}

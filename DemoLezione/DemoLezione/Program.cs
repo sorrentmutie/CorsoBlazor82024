@@ -1,5 +1,7 @@
+using DemoLezione.Business;
 using DemoLezione.Client.Pages;
 using DemoLezione.Components;
+using DemoLezione.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
+
+// builder.Services.AddScoped<IMyInterface, MyServerService>();    
 
 var app = builder.Build();
 

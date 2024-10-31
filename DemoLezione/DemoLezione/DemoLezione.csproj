@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\DemoLezione.Business\DemoLezione.Business.csproj" />
+    <ProjectReference Include="..\..\DemoLezione.UILibrary\DemoLezione.UILibrary.csproj" />
     <ProjectReference Include="..\DemoLezione.Client\DemoLezione.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.10" />
   </ItemGroup>

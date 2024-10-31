@@ -1,0 +1,25 @@
+﻿@page "/about"
+@inject IJSRuntime JSRuntime
+@rendermode InteractiveServer
+
+<h3>About</h3>
+<button @onclick="DoSomething">Click me</button>
+@somma
+
+<Component1/>
+
+
+@code {
+    int somma = 0;
+    private async Task DoSomething()
+    {
+         somma = await JSRuntime.InvokeAsync<int>("helloJavaScript");
+
+    }
+
+    [JSInvokable]
+    public static int Moltiplicazione(int a, int b)
+    {
+        return a * b;
+    }
+}

@@ -1,5 +1,7 @@
 ﻿@page "/counter"
-@rendermode InteractiveAuto
+@* @rendermode InteractiveAuto *@
+@rendermode @(new InteractiveWebAssemblyRenderMode(prerender: false))
+@inject IMyInterface myService
 
 <PageTitle>Counter</PageTitle>
 
@@ -9,8 +11,17 @@
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
+@message
+
 @code {
     private int currentCount = 0;
+    private string message = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        message = await myService.GetStringAsync();
+    }
+
 
     private void IncrementCount()
     {

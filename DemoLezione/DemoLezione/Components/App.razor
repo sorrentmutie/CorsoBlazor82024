@@ -15,6 +15,26 @@
 <body>
     <Routes />
     <script src="_framework/blazor.web.js"></script>
+   
+    <script>
+        function helloJavaScript() {
+            console.log("prova 2");
+           const x =  DotNet.invokeMethodAsync('DemoLezione', 'Moltiplicazione', 5,6)
+                .then(data => {
+                    console.log(data);
+                });
+        }
+
+        // helloJavaScript();
+
+        window.Somma = (a, b) => a+b ;
+
+        console.log(window);
+
+    </script>
+
+
+
 </body>
 
 </html>
