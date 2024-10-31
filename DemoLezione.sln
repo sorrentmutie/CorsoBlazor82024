@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoLezione", "DemoLezione\DemoLezione\DemoLezione.csproj", "{22B026EB-3F68-4623-B6A3-CB71F82BC4BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoLezione", "DemoLezione\DemoLezione\DemoLezione.csproj", "{22B026EB-3F68-4623-B6A3-CB71F82BC4BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoLezione.Client", "DemoLezione\DemoLezione.Client\DemoLezione.Client.csproj", "{0559930B-B684-4405-830F-BB2FA9549BD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoLezione.Client", "DemoLezione\DemoLezione.Client\DemoLezione.Client.csproj", "{0559930B-B684-4405-830F-BB2FA9549BD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
